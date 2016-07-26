@@ -1,6 +1,7 @@
 $(function() {
-    // Create the chart
+
     $('#container').highcharts({
+
         chart: {
             type: 'column',
             style: {
@@ -8,102 +9,174 @@ $(function() {
                 fontSize: '16px'
             }
         },
+
         title: {
             text: null
         },
+
         xAxis: {
             type: 'category'
         },
+
         yAxis: {
+            allowDecimals: true,
+            min: 0,
             title: {
-                text: 'Average Charge in USD'
+                text: 'Percentage of responses'
             },
+            reversedStacks: false,
             labels: {
-                format: '${value}'
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        plotOptions: {
-            series: {
-                borderWidth: 0,
-                borderRadius: 3,
-                dataLabels: {
-                    enabled: true,
-                    format: '${point.y:.0f}'
+                formatter: function() {
+                    return this.value + '%';
                 }
             }
         },
 
         tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y:.2f}</b><br/>'
+            formatter: function() {
+                return this.point.name + '<br><b>' +
+                    this.series.name + '</b>' + '<br>' + this.y + '%';
+            }
+        },
+
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            itemStyle: {
+                fontWeight: 'normal'
+            },
+            labelFormatter: function() {
+                return this.name;
+            },
+            title: {
+                style: {
+                    "fontWeight": "light",
+                    "fontSize": "10px"
+                },
+                text: "click to hide"
+            },
+            verticalAlign: "top"
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            },
+            series: {
+                borderWidth: 3,
+                borderRadius: 3,
+                dataLabels: {
+                    enabled: true,
+                    inside: false,
+                    formatter: function() {
+                        return Highcharts.numberFormat(this.y, 0) + '%';
+                    },
+                    color: 'black'
+                }
+            }
         },
 
         series: [{
-            name: 'Subject Area',
+            name: '$2500',
+            stack: '$2500',
+            color: '#032977',
             data: [{
-                name: 'High impact <br><b>Too Cheap</b>',
-                y: 372.74,
-                color: '#A0C7E5',
+                name: 'High impact',
+                y: 15.20
             }, {
-                name: 'High impact <br><b>Acceptable</b>',
-                y: 631.70,
-                color: '#648FD8',
+                name: 'Medium impact',
+                y: 15.51
             }, {
-                name: 'High impact <br><b>Too Expensive</b>',
-                y: 1293.99,
-                color: '#032977',
+                name: 'Low impact',
+                y: 9.46
             }, {
-                name: 'Medium impact <br><b>Too Cheap</b>',
-                y: 393.95,
-                color: '#C6DE8C',
+                name: 'No impact',
+                y: 4.76
             }, {
-                name: 'Medium impact <br><b>Acceptable</b>',
-                y: 556.21,
-                color: '#92CB9C',
-            }, {
-                name: 'Medium impact <br><b>Too Expensive</b>',
-                y: 1238.00,
-                color: '#1D5C56',
-            }, {
-                name: 'Low impact <br><b>Too Cheap</b>',
-                y: 348.19,
-                color: '#D22938',
-            }, {
-                name: 'Low impact <br><b>Acceptable</b>',
-                y: 546.79,
-                color: '#B40043',
-            }, {
-                name: 'Low impact <br><b>Too Expensive</b>',
-                y: 1092.19,
-                color: '#800049',
-            }, {
-                name: 'No impact <br><b>Too Cheap</b>',
-                y: 210.69,
-                color: '#F2BA49',
-            }, {
-                name: 'No impact <br><b>Acceptable</b>',
-                y: 353.90,
-                color: '#E87700',
-            }, {
-                name: 'No impact <br><b>Too Expensive</b>',
-                y: 988.86,
-                color: '#E55800',
-            }, {
-                name: 'New journal <br><b>Too Cheap</b>',
-                y: 207.03,
-                color: '#B1D8CF',
-            }, {
-                name: 'New journal <br><b>Acceptable</b>',
-                y: 492.27,
-                color: '#00A3B2',
-            }, {
-                name: 'New journal <br><b>Too Expensive</b>',
-                y: 863.27,
-                color: '#075B81',
+                name: 'New journal',
+                y: 13.33
             }]
-        }],
+        }, {
+            name: '$3000',
+            stack: '$3000',
+            color: '#A0C7E5',
+            data: [{
+                name: 'High impact',
+                y: 7.84
+            }, {
+                name: 'Medium impact',
+                y: 8.85
+            }, {
+                name: 'Low impact',
+                y: 5.41
+            }, {
+                name: 'No impact',
+                y: 0.00
+            }, {
+                name: 'New journal',
+                y: 6.67
+            }]
+        }, {
+            name: '$3500',
+            stack: '$3500',
+            color: '#1D5C56',
+            data: [{
+                name: 'High impact',
+                y: 5.15
+            }, {
+                name: 'Medium impact',
+                y: 5.93
+            }, {
+                name: 'Low impact',
+                y: 4.50
+            }, {
+                name: 'No impact',
+                y: 0.00
+            }, {
+                name: 'New journal',
+                y: 0.00
+            }]
+        }, {
+            name: '$4000',
+            stack: '$4000',
+            color: '#C6DE8C',
+            data: [{
+                name: 'High impact',
+                y: 2.92
+            }, {
+                name: 'Medium impact',
+                y: 3.01
+            }, {
+                name: 'Low impact',
+                y: 2.70
+            }, {
+                name: 'No impact',
+                y: 0.00
+            }, {
+                name: 'New journal',
+                y: 0.00
+            }]
+        }, {
+            name: '$4500',
+            stack: '$4500',
+            color: '#800049',
+            data: [{
+                name: 'High impact',
+                y: 2.34
+            }, {
+                name: 'Medium impact',
+                y: 2.46
+            }, {
+                name: 'Low impact',
+                y: 1.80
+            }, {
+                name: 'No impact',
+                y: 0.00
+            }, {
+                name: 'New journal',
+                y: 0.00
+            }]
+        }]
+
     });
 });

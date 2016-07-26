@@ -1,6 +1,7 @@
 $(function() {
-    // Create the chart
+
     $('#container').highcharts({
+
         chart: {
             type: 'column',
             style: {
@@ -8,114 +9,189 @@ $(function() {
                 fontSize: '16px'
             }
         },
+
         title: {
             text: null
         },
+
         xAxis: {
             type: 'category'
         },
+
         yAxis: {
+            allowDecimals: true,
+            min: 0,
             title: {
-                text: 'Average Charge in USD'
+                text: 'Percentage of responses'
             },
+            reversedStacks: false,
             labels: {
-                format: '${value}'
-            }
-        },
-        legend: {
-            enabled: false
-        },
-        plotOptions: {
-            series: {
-                borderWidth: 0,
-                borderRadius: 3,
-                dataLabels: {
-                    enabled: true,
-                    format: '${point.y:.0f}'
+                formatter: function() {
+                    return this.value + '%';
                 }
             }
         },
 
         tooltip: {
-            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y:.2f}</b><br/>'
+            formatter: function() {
+                return this.point.name + '<br><b>' +
+                    this.series.name + '</b>' + '<br>' + this.y + '%';
+            }
+        },
+
+        legend: {
+            align: 'right',
+            layout: 'vertical',
+            itemStyle: {
+                fontWeight: 'normal'
+            },
+            labelFormatter: function() {
+                return this.name;
+            },
+            title: {
+                style: {
+                    "fontWeight": "light",
+                    "fontSize": "10px"
+                },
+                text: "click to hide"
+            },
+            verticalAlign: "top"
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal'
+            },
+            series: {
+                borderWidth: 3,
+                borderRadius: 3,
+                dataLabels: {
+                    enabled: true,
+                    inside: false,
+                    formatter: function() {
+                        return Highcharts.numberFormat(this.y, 0) + '%';
+                    },
+                    color: 'black'
+                }
+            }
         },
 
         series: [{
-            name: 'Region',
+            name: '$2500',
+            stack: '$2500',
+            color: '#032977',
             data: [{
-                name: 'Africa & Middle East <br><b>Too Cheap</b>',
-                y: 305.68,
-                color: '#A0C7E5',
+                name: 'Africa & Middle East',
+                y: 9.41
             }, {
-                name: 'Africa & Middle East <br><b>Acceptable</b>',
-                y: 447.54,
-                color: '#648FD8',
+                name: 'Asia',
+                y: 18.65
             }, {
-                name: 'Africa & Middle East <br><b>Too Expensive</b>',
-                y: 917.54,
-                color: '#032977',
+                name: 'Australasia',
+                y: 10.61
             }, {
-                name: 'Asia <br><b>Too Cheap</b>',
-                y: 436.90,
-                color: '#C6DE8C',
+                name: 'Central & South America',
+                y: 9.82
             }, {
-                name: 'Asia <br><b>Acceptable</b>',
-                y: 636.26,
-                color: '#92CB9C',
+                name: 'Europe',
+                y: 15.09
             }, {
-                name: 'Asia <br><b>Too Expensive</b>',
-                y: 1377.23,
-                color: '#1D5C56',
-            }, {
-                name: 'Australasia <br><b>Too Cheap</b>',
-                y: 351.86,
-                color: '#D22938',
-            }, {
-                name: 'Australasia <br><b>Acceptable</b>',
-                y: 489.54,
-                color: '#B40043',
-            }, {
-                name: 'Australasia <br><b>Too Expensive</b>',
-                y: 1950.21,
-                color: '#800049',
-            }, {
-                name: 'Central & South America <br><b>Too Cheap</b>',
-                y: 276.82,
-                color: '#F2BA49',
-            }, {
-                name: 'Central & South America <br><b>Acceptable</b>',
-                y: 460.51,
-                color: '#E87700',
-            }, {
-                name: 'Central & South America <br><b>Too Expensive</b>',
-                y: 1061.89,
-                color: '#E55800',
-            }, {
-                name: 'Europe <br><b>Too Cheap</b>',
-                y: 395.16,
-                color: '#B1D8CF',
-            }, {
-                name: 'Europe <br><b>Acceptable</b>',
-                y: 604.14,
-                color: '#00A3B2',
-            }, {
-                name: 'Europe <br><b>Too Expensive</b>',
-                y: 1257.69,
-                color: '#075B81',
-            }, {
-                name: 'North America <br><b>Too Cheap</b>',
-                y: 360.75,
-                color: '#BCADE2',
-            }, {
-                name: 'North America <br><b>Acceptable</b>',
-                y: 603.09,
-                color: '#855199',
-            }, {
-                name: 'North America <br><b>Too Expensive</b>',
-                y: 1633.93,
-                color: '#522464',
+                name: 'North America',
+                y: 15.77
             }]
-        }],
+        }, {
+            name: '$3000',
+            stack: '$3000',
+            color: '#A0C7E5',
+            data: [{
+                name: 'Africa & Middle East',
+                y: 5.10
+            }, {
+                name: 'Asia',
+                y: 8.53
+            }, {
+                name: 'Australasia',
+                y: 6.82
+            }, {
+                name: 'Central & South America',
+                y: 4.29
+            }, {
+                name: 'Europe',
+                y: 9.68
+            }, {
+                name: 'North America',
+                y: 8.93
+            }]
+        }, {
+            name: '$3500',
+            stack: '$3500',
+            color: '#1D5C56',
+            data: [{
+                name: 'Africa & Middle East',
+                y: 2.75
+            }, {
+                name: 'Asia',
+                y: 7.54
+            }, {
+                name: 'Australasia',
+                y: 6.06
+            }, {
+                name: 'Central & South America',
+                y: 3.68
+            }, {
+                name: 'Europe',
+                y: 5.10
+            }, {
+                name: 'North America',
+                y: 7.14
+            }]
+        }, {
+            name: '$4000',
+            stack: '$4000',
+            color: '#C6DE8C',
+            data: [{
+                name: 'Africa & Middle East',
+                y: 1.96
+            }, {
+                name: 'Asia',
+                y: 4.96
+            }, {
+                name: 'Australasia',
+                y: 3.79
+            }, {
+                name: 'Central & South America',
+                y: 1.84
+            }, {
+                name: 'Europe',
+                y: 2.29
+            }, {
+                name: 'North America',
+                y: 4.76
+            }]
+        }, {
+            name: '$4500',
+            stack: '$4500',
+            color: '#800049',
+            data: [{
+                name: 'Africa & Middle East',
+                y: 1.18
+            }, {
+                name: 'Asia',
+                y: 4.17
+            }, {
+                name: 'Australasia',
+                y: 3.03
+            }, {
+                name: 'Central & South America',
+                y: 1.84
+            }, {
+                name: 'Europe',
+                y: 1.56
+            }, {
+                name: 'North America',
+                y: 4.46
+            }]
+        }]
+
     });
 });
