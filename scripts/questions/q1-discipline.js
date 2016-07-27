@@ -80,19 +80,19 @@ $(function() {
                 name: '$2500',
                 data: [{
                     name: 'Health Sciences',
-                    y: 15.70,
+                    y: 21.54,
                     // drilldown: 'hs2013open'
                 }, {
                     name: 'Life Sciences',
-                    y: 19.44,
+                    y: 28.26,
                     // drilldown: 'hs2014open'
                 }, {
                     name: 'Physical Sciences',
-                    y: 15.43,
+                    y: 25.23,
                     // drilldown: 'hs2015open'
                 }, {
                     name: 'Social Sciences & Humanities',
-                    y: 10.49,
+                    y: 19.72,
                     // drilldown: 'hs2016open'
                 }],
                 stack: '$2500',
@@ -101,19 +101,19 @@ $(function() {
                 name: '$3000',
                 data: [{
                     name: 'Health Sciences',
-                    y: 8.99,
+                    y: 15.38,
                     // drilldown: 'hs2013other',
                 }, {
                     name: 'Life Sciences',
-                    y: 12.12,
+                    y: 26.09,
                     // drilldown: 'hs2014other',
                 }, {
                     name: 'Physical Sciences',
-                    y: 8.44,
+                    y: 19.63,
                     // drilldown: 'hs2015other',
                 }, {
                     name: 'Social Sciences & Humanities',
-                    y: 5.25,
+                    y: 15.49,
                     // drilldown: 'hs2016other',
                 }],
                 stack: '$3000',
@@ -124,19 +124,19 @@ $(function() {
                 name: '$3500',
                 data: [{
                     name: 'Health Sciences',
-                    y: 6.53,
+                    y: 9.23,
                     // drilldown: 'ls2013open',
                 }, {
                     name: 'Life Sciences',
-                    y: 7.58,
+                    y: 8.70,
                     // drilldown: 'ls2014open',
                 }, {
                     name: 'Physical Sciences',
-                    y: 5.53,
+                    y: 11.21,
                     // drilldown: 'ls2015open',
                 }, {
                     name: 'Social Sciences & Humanities',
-                    y: 3.93,
+                    y: 5.63,
                     // drilldown: 'ls2016open',
                 }],
                 stack: '$3500',
@@ -145,19 +145,19 @@ $(function() {
                 name: '$4000',
                 data: [{
                     name: 'Health Sciences',
-                    y: 3.17,
+                    y: 7.96,
                     // drilldown: 'ls2013other',
                 }, {
                     name: 'Life Sciences',
-                    y: 4.80,
+                    y: 6.52,
                     // drilldown: 'ls2014other',
                 }, {
                     name: 'Physical Sciences',
-                    y: 3.49,
+                    y: 8.41,
                     // drilldown: 'ls2015other',
                 }, {
                     name: 'Social Sciences & Humanities',
-                    y: 2.46,
+                    y: 2.82,
                     // drilldown: 'ls2016other',
                 }],
                 stack: '$4000',
@@ -168,19 +168,19 @@ $(function() {
                 name: '$4500',
                 data: [{
                     name: 'Health Sciences',
-                    y: 2.65,
+                    y: 3.08,
                     // drilldown: 'ps2013open',
                 }, {
                     name: 'Life Sciences',
-                    y: 4.04,
+                    y: 4.35,
                     // drilldown: 'ps2014open',
                 }, {
                     name: 'Physical Sciences',
-                    y: 2.91,
+                    y: 4.67,
                     // drilldown: 'ps2015open',
                 }, {
                     name: 'Social Sciences & Humanities',
-                    y: 1.64,
+                    y: 2.82,
                     // drilldown: 'ps2016open',
                 }],
                 stack: '$4500',

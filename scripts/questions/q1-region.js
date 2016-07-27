@@ -82,22 +82,22 @@ $(function() {
             color: '#032977',
             data: [{
                 name: 'Africa & Middle East',
-                y: 9.41
+                y: 16.67
             }, {
                 name: 'Asia',
-                y: 18.65
+                y: 27.85
             }, {
                 name: 'Australasia',
-                y: 10.61
+                y: 11.11
             }, {
                 name: 'Central & South America',
-                y: 9.82
+                y: 11.11
             }, {
                 name: 'Europe',
-                y: 15.09
+                y: 22.76
             }, {
                 name: 'North America',
-                y: 15.77
+                y: 33.33
             }]
         }, {
             name: '$3000',
@@ -105,22 +105,22 @@ $(function() {
             color: '#A0C7E5',
             data: [{
                 name: 'Africa & Middle East',
-                y: 5.10
+                y: 16.67
             }, {
                 name: 'Asia',
-                y: 8.53
+                y: 24.05
             }, {
                 name: 'Australasia',
-                y: 6.82
+                y: 11.11
             }, {
                 name: 'Central & South America',
-                y: 4.29
+                y: 7.41
             }, {
                 name: 'Europe',
-                y: 9.68
+                y: 17.07
             }, {
                 name: 'North America',
-                y: 8.93
+                y: 22.22
             }]
         }, {
             name: '$3500',
@@ -128,22 +128,22 @@ $(function() {
             color: '#1D5C56',
             data: [{
                 name: 'Africa & Middle East',
-                y: 2.75
+                y: 5.56
             }, {
                 name: 'Asia',
-                y: 7.54
+                y: 11.39
             }, {
                 name: 'Australasia',
-                y: 6.06
+                y: 0.00
             }, {
                 name: 'Central & South America',
-                y: 3.68
+                y: 3.70
             }, {
                 name: 'Europe',
-                y: 5.10
+                y: 8.94
             }, {
                 name: 'North America',
-                y: 7.14
+                y: 14.81
             }]
         }, {
             name: '$4000',
@@ -151,22 +151,22 @@ $(function() {
             color: '#C6DE8C',
             data: [{
                 name: 'Africa & Middle East',
-                y: 1.96
+                y: 0.00
             }, {
                 name: 'Asia',
-                y: 4.96
+                y: 5.06
             }, {
                 name: 'Australasia',
-                y: 3.79
+                y: 0.00
             }, {
                 name: 'Central & South America',
-                y: 1.84
+                y: 3.70
             }, {
                 name: 'Europe',
-                y: 2.29
+                y: 8.13
             }, {
                 name: 'North America',
-                y: 4.76
+                y: 14.81
             }]
         }, {
             name: '$4500',
@@ -174,22 +174,22 @@ $(function() {
             color: '#800049',
             data: [{
                 name: 'Africa & Middle East',
-                y: 1.18
+                y: 0.00
             }, {
                 name: 'Asia',
-                y: 4.17
+                y: 3.80
             }, {
                 name: 'Australasia',
-                y: 3.03
+                y: 0.00
             }, {
                 name: 'Central & South America',
-                y: 1.84
+                y: 0.00
             }, {
                 name: 'Europe',
-                y: 1.56
+                y: 4.88
             }, {
                 name: 'North America',
-                y: 4.46
+                y: 7.41
             }]
         }]
 

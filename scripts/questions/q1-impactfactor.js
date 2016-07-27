@@ -82,19 +82,13 @@ $(function() {
             color: '#032977',
             data: [{
                 name: 'High impact',
-                y: 15.20
+                y: 26.77
             }, {
                 name: 'Medium impact',
-                y: 15.51
+                y: 20.61
             }, {
                 name: 'Low impact',
-                y: 9.46
-            }, {
-                name: 'No impact',
-                y: 4.76
-            }, {
-                name: 'New journal',
-                y: 13.33
+                y: 8.70
             }]
         }, {
             name: '$3000',
@@ -102,19 +96,13 @@ $(function() {
             color: '#A0C7E5',
             data: [{
                 name: 'High impact',
-                y: 7.84
+                y: 19.69
             }, {
                 name: 'Medium impact',
-                y: 8.85
+                y: 16.79
             }, {
                 name: 'Low impact',
-                y: 5.41
-            }, {
-                name: 'No impact',
-                y: 0.00
-            }, {
-                name: 'New journal',
-                y: 6.67
+                y: 8.70
             }]
         }, {
             name: '$3500',
@@ -122,19 +110,13 @@ $(function() {
             color: '#1D5C56',
             data: [{
                 name: 'High impact',
-                y: 5.15
+                y: 9.45
             }, {
                 name: 'Medium impact',
-                y: 5.93
+                y: 9.16
             }, {
                 name: 'Low impact',
-                y: 4.50
-            }, {
-                name: 'No impact',
-                y: 0.00
-            }, {
-                name: 'New journal',
-                y: 0.00
+                y: 4.35
             }]
         }, {
             name: '$4000',
@@ -142,19 +124,13 @@ $(function() {
             color: '#C6DE8C',
             data: [{
                 name: 'High impact',
-                y: 2.92
+                y: 8.66
             }, {
                 name: 'Medium impact',
-                y: 3.01
+                y: 3.82
             }, {
                 name: 'Low impact',
-                y: 2.70
-            }, {
-                name: 'No impact',
-                y: 0.00
-            }, {
-                name: 'New journal',
-                y: 0.00
+                y: 4.35
             }]
         }, {
             name: '$4500',
@@ -162,19 +138,13 @@ $(function() {
             color: '#800049',
             data: [{
                 name: 'High impact',
-                y: 2.34
+                y: 3.94
             }, {
                 name: 'Medium impact',
-                y: 2.46
+                y: 2.29
             }, {
                 name: 'Low impact',
-                y: 1.80
-            }, {
-                name: 'No impact',
-                y: 0.00
-            }, {
-                name: 'New journal',
-                y: 0.00
+                y: 4.35
             }]
         }]
 
