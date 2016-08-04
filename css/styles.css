@@ -6966,9 +6966,9 @@ p a {
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease; }
-  p a:hover {
+  p a:hover, p a:focus {
     text-decoration: none; }
-    p a:hover:after {
+    p a:hover:after, p a:focus:after {
       width: 0%; }
 
 .overview-links {
